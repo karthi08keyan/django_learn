@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>smaple works</h1>
+    <img src=" {% static 'images/thumbnail.png'%} " alt="helo">
+
+    <table>
+        {%if emp_dict%}
+        <tr>
+        {% for employee in emp_detail%}
+        <td>{%employee.empNo%}</td>
+        <td>{%employee.empName%}</td>
+        <td>{%employee.empSalary%}</td>
+        <td>{%employee.empAddress%}</td>
+    </tr>
+    {%endfor%}
+    {%endif%}
+    </table>
+</body>
+</html>

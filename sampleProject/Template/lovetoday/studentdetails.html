@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   {% extends 'lovetoday/base.html' %}
+    <title>StudentDetails</title>
+</head>
+<body>
+{% block content%}
+<table>
+   <thead>
+   <th>StudentNo</th>
+   <th>StudentName</th>
+   <th>StudentClass</th>
+   <th>StudentAddress</th>
+  </thead>
+  {%for stu in student%}
+  <tr>
+   <td>{{stu.student_No}}</td>
+   <td>{{stu.student_Name}}</td>
+   <td>{{stu.student_Class}}</td>
+   <td>{{stu.student_Address}}</td>
+  {%endfor%}
+</tr>
+</table>
+{%endblock%}
+    
+</body>
+</html>
